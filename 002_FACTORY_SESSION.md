@@ -1,324 +1,140 @@
-# Factory Session
+---
 
-**Document ID:** FACTORY-20260705-003
+# Session DNA
 
-**Version:** 1.0
+Every Factory Session shall generate a unique **Session DNA**.
 
-**Status:** Approved
+Session DNA represents the complete identity and operational state of a working session.
 
-**Repository:** AHI-Factory
+Its purpose is to preserve continuity, reproducibility, traceability and interoperability across different AI platforms, AHI applications, devices and future robots.
 
-**Author:** AHI Secretary
+A Session DNA may include:
 
-**Architecture Authority:** Lê Minh Công (Founder)
+- Session ID
+- Session Version
+- User ID
+- Entity ID (AHI-P / AHI-O / AHI-G / AHI-Omniverse)
+- Repository
+- Active AI Team
+- Current Mission
+- Current Capability
+- Current Workflow
+- Working Context
+- Knowledge Cache Reference
+- Working Memory Reference
+- Language Profile
+- Knowledge Translation Profile
+- Permission Profile
+- Governance Profile
+- Constitution Version
+- Standards Version
+- Session State
+- Creation Time
+- Last Update Time
+- Previous Session Reference
+- Next Session Reference
 
-**Approver:** Lê Minh Công (Founder)
+Session DNA shall never directly contain Secret Space (SS) data.
 
-**Created:** 2026-07-05
-
-**Last Updated:** 2026-07-05
+Instead, only encrypted references protected by the owner's permissions shall be stored.
 
 ---
 
-# Purpose
+# Session Continuity
 
-Factory Session defines the lifecycle of a working session between Human, AI and future AHI systems.
+Session DNA enables uninterrupted work across multiple environments.
 
-Its purpose is to ensure that every session starts with the correct context, user profile, permissions, repository knowledge and working memory, enabling continuous collaboration without repeatedly explaining previous work.
+Examples include:
 
----
+- ChatGPT
+- Claude
+- Gemini
+- Grok
+- IDE
+- AHI Desktop
+- AHI Mobile
+- AHI Cloud
+- AHI Robot
 
-# Principles
-
-Every Factory Session shall:
-
-- Understand the current user.
-- Respect the AHI Constitution.
-- Restore previous work whenever possible.
-- Load only the necessary knowledge into working memory.
-- Protect private and Secret Space (SS) data.
-- Optimize user productivity and experience.
-- Support continuous knowledge evolution.
+When a session is resumed, AHI reconstructs the complete working context from the Session DNA together with the latest authorized repository knowledge.
 
 ---
 
-# Factory Session Lifecycle
+# Session Evolution
 
-Session Request
+Session DNA evolves continuously during the working session.
 
-↓
+Every approved decision, completed task, validated knowledge contribution or governance update may generate a new Session DNA version.
 
-User Authentication
-
-↓
-
-User Profile Loading
-
-↓
-
-Language Profile Loading
-
-↓
-
-Repository Context Loading
-
-↓
-
-AI Team Loading
-
-↓
-
-Knowledge Cache Loading
-
-↓
-
-Working Memory Loading
-
-↓
-
-Current Mission Loading
-
-↓
-
-Permission Verification
-
-↓
-
-AHI Compliance Check
-
-↓
-
-Factory Ready
-
-↓
-
-Working Session
-
-↓
-
-Session Save
-
-↓
-
-Session Suspend / Resume
-
-↓
-
-Session End
+The complete evolution history shall remain traceable while preserving ownership, privacy and constitutional compliance.
 
 ---
 
-# User Profile
+# Session Ownership
 
-A Factory Session shall load the user's profile.
+Every Session DNA belongs to its owner.
 
-Typical information includes:
+Ownership follows the governance model defined by the AHI Constitution.
 
-- Preferred language
-- Native language
-- Country or region
-- Time zone
-- Preferred writing style
-- Preferred document format
-- Accessibility preferences
-
-This information personalizes the interaction without changing the AHI Constitution.
+Delegation, inheritance and collaboration never transfer ownership unless explicitly authorized.
 
 ---
 
-# Language Profile
+# AHI DNA Architecture
 
-The Language Profile provides natural-language adaptation.
+Session DNA is one component of the broader AHI DNA architecture.
 
-It may include:
+Every AHI Entity shall possess a long-term identity represented by an Entity DNA.
 
-- Native language
-- Secondary languages
-- Preferred terminology
-- Translation preferences
-- AHI Dictionary
-- AHI Terminology
-- Knowledge Translation Engine
+Entity DNA provides the persistent identity of an AHI entity, while Session DNA represents only the temporary working state of a specific session.
 
-Natural language interaction is separated from AHI-Lang, which is reserved for programming, system architecture and future hardware.
+The architecture is defined as follows:
 
----
+Human
+    │
+    ▼
+AHI Entity DNA
+    ├── Identity DNA
+    ├── Knowledge DNA
+    ├── Governance DNA
+    ├── Evolution DNA
+    ├── Relationship DNA
+    ├── Capability DNA
+    └── Session DNA
 
-# User Context
+Definitions:
 
-When available and permitted, the session may load:
+- Identity DNA defines the permanent identity of an entity.
+- Knowledge DNA defines accumulated knowledge and expert thinking.
+- Governance DNA defines ownership, permissions and management rules.
+- Evolution DNA records the evolutionary history of the entity.
+- Relationship DNA records relationships with other entities.
+- Capability DNA defines reusable capabilities created or owned by the entity.
+- Session DNA records the current working session.
 
-- B.A.N.K communication profile
-- 5W1H context
-- Active repositories
-- Current project
-- Current sprint
-- Open tasks
-- Previous discussions
+Entity DNA is persistent.
 
-Only the minimum context required for the session shall be loaded.
+Session DNA is temporary.
 
----
+Capability DNA is reusable.
 
-# Repository Context
+Repository DNA (future) will represent the architecture, standards and evolution state of an entire repository.
 
-The selected repository determines:
-
-- Standards
-- Architecture
-- AI Team
-- Active roadmap
-- Decisions
-- Drafts
-- Knowledge scope
-
-Multiple repositories may participate in the same session.
-
----
-
-# AI Team
-
-The Factory Session activates the AI Team responsible for the repository.
-
-Typical roles include:
-
-- PM (Project Manager)
-- P (Professor)
-- S (Secretary)
-- L (Team Leader)
-- A (Assistant)
-
-Additional specialized roles may be loaded when required.
-
----
-
-# Knowledge Cache
-
-Knowledge Cache contains only the information required for the current session.
-
-Examples:
-
-- Current architecture
-- Current standards
-- Active decisions
-- Active roadmap
-- Frequently referenced documents
-
-Persistent knowledge remains stored in the repository knowledge base.
-
----
-
-# Working Memory
-
-Working Memory contains temporary information for the current session.
-
-Examples:
-
-- Current objective
-- Active tasks
-- Questions
-- Draft responses
-- Intermediate results
-
-Working Memory is cleared or archived when the session ends.
-
----
-
-# Secret Space (SS)
-
-Secret Space is never loaded automatically.
-
-SS requires explicit authorization from its owner.
-
-Rules:
-
-- SS remains encrypted when stored.
-- SS is excluded from shared Knowledge Cache.
-- SS cannot be accessed through inheritance unless explicitly authorized according to the AHI Constitution.
-
----
-
-# Permission Verification
-
-Before implementation begins, verify:
-
-- Repository permissions
-- User permissions
-- AI Team permissions
-- Delegation status
-- Governance rules
-
-If verification fails, the session shall stop.
-
----
-
-# AHI Compliance Check
-
-Before entering the Working Session, AHI Compliance Engine (ACE) verifies:
-
-- Constitution compliance
-- Repository compliance
-- Permission compliance
-- Privacy compliance
-- Knowledge integrity
-
-Only compliant sessions may continue.
-
----
-
-# Session Suspend
-
-A session may be suspended while preserving:
-
-- Working Memory
-- Active tasks
-- Current mission
-- Context references
-
----
-
-# Session Resume
-
-When resuming a session, the Factory shall:
-
-- Restore Working Memory.
-- Restore active repository context.
-- Restore AI Team.
-- Restore unfinished tasks.
-- Reload updated standards if necessary.
-
----
-
-# Session End
-
-At the end of the session:
-
-- Save approved decisions.
-- Archive temporary drafts.
-- Update meeting records.
-- Update decision logs.
-- Clear temporary memory.
-- Preserve long-term knowledge.
+Together they form the Digital DNA Framework of the AHI ecosystem.
 
 ---
 
 # Future Evolution
 
-Future versions may support:
+Future versions may additionally support:
 
-- Cross-device session continuity.
-- Multi-AI collaborative sessions.
-- Robot session synchronization.
-- Autonomous Factory Sessions.
-- Digital Successor continuous sessions.
-
----
-
-# References
-
-- AHI Constitution
-- Factory Initialization
-- Factory Boot Sequence
-- AI Team Standard
-- Assistant Interaction Standard
-- AHI Compliance Engine
+- Repository DNA
+- Organization DNA
+- Government DNA
+- Omniverse DNA
+- Robot DNA
+- Device DNA
+- Capability DNA Marketplace
+- Autonomous Session Migration
+- Cross-AI Session Synchronization
+- Human Digital Successor Continuity
